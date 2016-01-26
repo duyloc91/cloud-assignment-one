@@ -11,18 +11,11 @@
 <body ng-controller="userController">
 <div class="container">
 
-<h3>Todo:</h3>
-<ol>
-  <li> Change the Firebase url to be yours.</li>
-  <li> Change the Google Analytics tracking code to be yours.</li>
-  <li> Delete these todo bullets.</li>
-</ol>
+<h3>Moodbook</h3>
+
 <hr>
-The Singapore Government has launched a scheme where they will pay university students and recent graduates to work for local SaaS companies for up to 1 year. In addition to this government-funded subsidy, we are authorized to pay you an incentive bonus plan based on your ability to facilitate the growth of our SaaS business. Our company’s bonus plan will pay you the full amount of all recurring revenue that you personally help to facilitate. We will continue to award you all recurring revenue for 1 year after you leave the company. Please watch our short onboarding video to get an understanding of our servic.e After that, we would appreciate your feedback on what we could do to increase the possibility of you joining our company to help facilitate our growth. 
+ 
 <hr>
-<a href="">Click here</a> to open our application in another tab<br>
-<a href="">Click here</a> to watch our overview video.<br>
-<br>
 
 <!-- Show this div when the users is logged in -->
 <div ng-show="currentUser">
@@ -113,47 +106,7 @@ Please consider reviewing the applications of:
 
 </div>
 <hr>
-<input type="checkbox" ng-model="hide_table" ng-init="hide_table=false"> Show submitted feedback.
-<table ng-show="hide_table" class="table table-striped">
-  <thead>
-    <tr>
-      <th>Edit</th>
-      <th>UID</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-      <th>School</th>
-      <th>Start</th>
-      <th>Stop</th>
-      <th>Continue</th>
-      <th>Other</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="user in users">
-      <td>
-        <button class="btn" ng-click="editFeedback(user.$id)">
-          <span class="glyphicon glyphicon-pencil"></span>  Edit
-        </button>
-      </td>
-      <td>{{ user.uid }}</td>
-      <td>{{ user.fName }}</td>
-      <td>{{ user.lName }}</td>
-      <td>{{ user.email }}</td>
-      <td>{{ user.school }}</td>
-      <td>{{ user.start }}</td>
-      <td>{{ user.stop }}</td>
-      <td>{{ user.continue }}</td>
-      <td>{{ user.other }}</td>
-    
-      <td>
-        <button class="btn" ng-click="deleteFeedback($index)">
-          <span class="glyphicon glyphicon-pencil"></span>  Delete
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
 
 <script>
   var myApp = angular.module("myApp", ["firebase"]);
