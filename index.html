@@ -22,10 +22,7 @@
 <!-- Show this div when the users is logged in -->
 <div ng-show="currentUser">
   You are logged in as: {{currentUser.github.displayName}} <br><br>
-  <button class="btn btn-success" ng-click="editFeedback('new')">
-    <span class="glyphicon"></span>Click here to leave feedback.
-  </button>
-    <button class="btn btn-success" ng-click="logout()">
+    <button class="btn btn-danger" ng-click="logout()">
     <span class="glyphicon"></span>Logout </button>
 </div>
 
@@ -33,72 +30,11 @@
 <!-- Show this div when the user is not logged in -->
 <div ng-hide="currentUser">
   <button class="btn btn-success" ng-click="login('github')">
-    <span class="glyphicon glyphicon-user"></span>Login to leave feedback.
+    <span class="glyphicon glyphicon-user"></span>Login with Github
   </button>
 </div>
 
-<div ng-show="edit">
-<h3 ng-show="edit">Leave Feedback:</h3>
 
-<form class="form-horizontal">
-  <div class="form-group">
-    <label class="col-sm-2 control-label">UserID: </label>{{newuser.uid}}
-  </div> 
-  <div class="form-group">
-    <label class="col-sm-2 control-label">First Name:</label>
-    <div class="col-sm-10">
-    <input type="text" ng-model="newuser.fName" ng-disabled="!edit" placeholder="First Name">
-    </div>
-  </div> 
-  <div class="form-group">
-    <label class="col-sm-2 control-label">Last Name:</label>
-    <div class="col-sm-10">
-    <input type="text" ng-model="newuser.lName" ng-disabled="!edit" placeholder="Last Name">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-2 control-label">SMU Email:</label>
-    <div class="col-sm-10">
-    <input type="text" ng-model="newuser.email" ng-disabled="!edit" placeholder="cboesch@mitb.smu.edu.sg">
-    </div>
-  </div> 
-  <div class="form-group">
-    <label class="col-sm-2 control-label">School:</label>
-    <div class="col-sm-10">
-    <input type="text" ng-model="newuser.school" ng-disabled="!edit" placeholder="(MBA, MM, Bus, SS, Econ)">
-    </div>
-  </div> 
-  <div class="form-group">
-    <label class="col-sm-2 control-label">What should we start doing?</label>
-    <div class="col-sm-10">
-    <input type="text" ng-model="newuser.start" ng-disabled="!edit" placeholder="You should start ..">
-    </div>
-  </div> 
-    <div class="form-group">
-    <label class="col-sm-2 control-label">What should we stop doing?</label>
-    <div class="col-sm-10">
-    <input type="text" ng-model="newuser.stop" ng-disabled="!edit" placeholder="You should stop ..">
-    </div>
-  </div> 
-    <div class="form-group">
-    <label class="col-sm-2 control-label">What should we continue doing?</label>
-    <div class="col-sm-10">
-    <input type="text" ng-model="newuser.continue" ng-disabled="!edit" placeholder="You should continue ..">
-    </div>
-  </div> 
-    <div class="form-group">
-    <label class="col-sm-2 control-label">What other recommendations do you have?</label>
-    <div class="col-sm-10">
-    <input type="text" ng-model="newuser.other" ng-disabled="!edit" placeholder="You should also ..">
-    </div>
-  </div> 
-</form>
-
-<button class="btn btn-success"  ng-click="save()">
-<span class="glyphicon glyphicon-save"></span>  Save Feedback
-</button>
-
-</div>
 <hr>
 Please consider reviewing the applications of:
 <ul>
