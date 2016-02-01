@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Angular.js Star Rating Directive</title>
+
+
+
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="stylesheets/rating.css" />
+
+  <script src="javascripts/prefixfree.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <div ng-app="app" ng-controller="RatingController as rating">
+
+    <div star-rating ng-model="rating.rating1" max="5" on-rating-select="rating.rateFunction(rating)"></div>
+  </div>
+  
+  <script src="bower_components/angular/angular.min.js"></script>
+
+  <script src="javascripts/rating.js"></script>
+
+
+
+
+</body>
+</html>

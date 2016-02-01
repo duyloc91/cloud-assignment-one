@@ -1,45 +1,76 @@
 <!DOCTYPE html>
 <html lang="en-us" ng-app="geo-ass-one">
-  <head>
-    <meta charset="UTF-8">
-    <title>Geo-assignment-one by duyloc91</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css" />
-    <link rel="stylesheet" href="stylesheets/map.css" />
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
-  </head>
-  <body ng-controller="TrailController">
-    <div class="left-column">
-      <div class="input-group search-area">
-        <input type="text" class="form-control search-bar" ng-model="search"> 
-        <span class="input-group-btn">
-          <button class="btn btn-info" type="button">Surprise Me</button>
-        </span>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <title>Geo-assignment-one by duyloc91</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="stylesheets/map.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="stylesheets/rating.css" />
 
-      <div class="result-panels">
-        <div class="panel panel-success" ng-repeat="trail in trails | filter:search">
-          <div class="panel-heading">
-            <a class="btn btn-block">{{trail.title}}</a>
-            <span class="badge badge-panel"><span class="glyphicon glyphicon-star"></span>4.5</span>
+  
+</head>
+<body ng-controller="TrailController">
+  <div class="left-column">
+    <div class="input-group search-area">
+      <input type="text" class="form-control search-bar" ng-model="search"> 
+      <span class="input-group-btn">
+        <button class="btn btn-info" type="button">Surprise Me</button>
+      </span>
+    </div>
+
+    <div class="result-panels">
+      <div class="panel panel-success" ng-repeat="trail in trails | filter:search">
+        <div class="panel-heading">
+          <a class="btn btn-block" ng-click="zoominTrail()">{{trail.title}}</a>
+          <span class="badge badge-panel"><span class="glyphicon glyphicon-star"></span>4.5</span>
+        </div>
+        <div class="panel-body">
+          <div ng-controller="RatingController as rating">
+            <div star-rating ng-model="rating.rating1" max="5" on-rating-select="rating.rateFunction(rating)"></div>
           </div>
-          <div class="panel-body">
-            <p ng-bind-html="trail.details"/>
-            <p>{{trail.duration}}</p>
-          </div>
+          <img class="panel-img" src="images/1.jpg">
+          <button ng-click="exploreTrail(trail)" class="btn btn-info badge-panel" type="button"><span class="glyphicon glyphicon-info-sign"></span> Explore</button>
+
+          <p>{{trail.duration}}</p>
         </div>
       </div>
     </div>
+  </div>
 
-    <leaflet class="map" lf-center="center" geojson="geojson" layers="layers"></leaflet>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/leaflet/dist/leaflet.js"></script>
-    <script src="javascripts/angular-leaflet-directive.min.js"></script>
-    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
-    <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
-    <script src="javascripts/main.js"></script>
-  </body>
+  <leaflet ng-show="showMap" class="map" lf-center="center" geojson="geojson" layers="layers"></leaflet>
+  <div ng-show="showDetails" class="map" l>
+    <div class="title-details"><h3>{{exploring.title}} <span class="badge"> <span class="glyphicon glyphicon-star"></span>4.5</span></h3>
+      <div ng-controller="RatingController as rating">
+        <div star-rating ng-model="rating.rating1" max="5" on-rating-select="rating.rateFunction(rating)"></div>
+      </div>
+      <img class="details-img" src="images/1.jpg">
+      <img class="details-img" src="images/2.jpg">
+      <img class="details-img" src="images/3.jpg">
+      <span><p class="highlights" ng-bind-html="exploring.details"></p><span>
+
+      <button class="btn btn-sm btn-success" type="button"><span class="glyphicon glyphicon-plus"></span> Add to itinerary</button>
+      <button class="btn btn-sm btn-success" type="button"><span class="glyphicon glyphicon-download-alt"></span> Download</button>
+      <h4>Reviews</h4>
+      <b>WOW Experience!</b>
+      <p><i>My friends and i decided to take some beautiful photos today for our photo album in instagram. 
+      <br>The views recommended here were amazing. Best to go during the day. Thumbs up!</i></p>
+      <p style="right:200px; font-weight:bold;">--Terence Long</p>
+    </div>
+
+  </div>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/leaflet/dist/leaflet.js"></script>
+  <script src="javascripts/angular-leaflet-directive.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+  <script src="javascripts/prefixfree.min.js"></script>
+  <script src="javascripts/main.js"></script>
+</body>
 </html>

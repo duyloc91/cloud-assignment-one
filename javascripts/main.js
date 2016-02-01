@@ -2,10 +2,12 @@
 var app = angular.module('geo-ass-one', ['leaflet-directive', 'firebase', 'ngSanitize']);
 
 app.controller("TrailController", [ "$scope", "$http", "$firebase", "leafletData", function($scope, $http, $firebase, leafletData) {
+            $scope.showMap = true;
+            $scope.showDetails = false;
             angular.extend($scope, {
                 center: {
                     lat: 1.352083,
-                    lng: 103.819836,
+                    lng: 103.899836,
                     zoom: 12
                 },
                 layers: {
@@ -22,19 +24,7 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", "leafletData
 
                         }
                     },
-                    overlays: {
-                        // wms: {
-                        //     name: 'EEUU States (WMS)',
-                        //     type: 'wms',
-                        //     visible: true,
-                        //     url: 'http://suite.opengeo.org/geoserver/usa/wms',
-                        //     layerParams: {
-                        //         layers: 'usa:states',
-                        //         format: 'image/png',
-                        //         transparent: true
-                        //     }
-                        // }
-                    }
+                    overlays: {}
                 }
             });
 
@@ -78,8 +68,23 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", "leafletData
               });
             }
 
+            $scope.zoominTrail = function(){
+                $scope.center = {
+                    lat: 1.348737,
+                    lng: 103.95607,
+                    zoom: 15
+                }
+            }
 
+            $scope.exploreTrail = function(trail){
+                $scope.showMap = false;
+                $scope.showDetails = true;
+                $scope.exploring = trail;
+            }
 
+            $scope.returnMap = function(){
+                $scope.showMap = true;
+            }
 
 
 
@@ -98,25 +103,60 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", "leafletData
                 });
             });
 
-            // // Get the countries geojson data from a JSON
-            // $http.get("json/JPN.geo.json").success(function(data, status) {
-            //     console.log(data);
-            //     angular.extend($scope, {
-            //         geojson: {
-            //             data: data,
-            //             style: {
-            //                 fillColor: "green",
-            //                 weight: 2,
-            //                 opacity: 1,
-            //                 color: 'white',
-            //                 dashArray: '3',
-            //                 fillOpacity: 0.7
-            //             }
-            //         }
-            //     });
-            // });
-
-            // $http.get("json/trails.json").success(function(data, status) {
-            //     $scope.trails = data.trails;
-            // });
         }]);
+
+app.controller('RatingController', RatingController)
+    .directive('starRating', starRating);
+
+  function RatingController() {
+    this.rating1 = 5;
+    this.rating2 = 2;
+    this.isReadonly = true;
+    this.rateFunction = function(rating) {
+      console.log('Rating selected: ' + rating);
+    };
+  }
+
+  function starRating() {
+    return {
+      restrict: 'EA',
+      template:
+        '<ul class="star-rating" ng-class="{readonly: readonly}">' +
+        '  <li ng-repeat="star in stars" class="star" ng-class="{filled: star.filled}" ng-click="toggle($index)">' +
+        '    <i class="fa fa-star"></i>' + // or &#9733
+        '  </li>' +
+        '</ul>',
+      scope: {
+        ratingValue: '=ngModel',
+        max: '=?', // optional (default is 5)
+        onRatingSelect: '&?',
+        readonly: '=?'
+      },
+      link: function(scope, element, attributes) {
+        if (scope.max == undefined) {
+          scope.max = 5;
+        }
+        function updateStars() {
+          scope.stars = [];
+          for (var i = 0; i < scope.max; i++) {
+            scope.stars.push({
+              filled: i < scope.ratingValue
+            });
+          }
+        };
+        scope.toggle = function(index) {
+          if (scope.readonly == undefined || scope.readonly === false){
+            scope.ratingValue = index + 1;
+            scope.onRatingSelect({
+              rating: index + 1
+            });
+          }
+        };
+        scope.$watch('ratingValue', function(oldValue, newValue) {
+          if (newValue) {
+            updateStars();
+          }
+        });
+      }
+    };
+  }

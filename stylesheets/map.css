@@ -37,3 +37,19 @@
 .badge-panel{
 	float:right;
 }
+
+.panel-img{
+	width:50%;
+}
+
+.title-details{
+	margin-left:20px;
+}
+
+.details-img{
+	width:200px;
+}
+
+.highlights{
+	margin-top: 20px;
+}
