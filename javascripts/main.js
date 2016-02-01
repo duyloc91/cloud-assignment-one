@@ -84,6 +84,12 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", "leafletData
 
             $scope.returnMap = function(){
                 $scope.showMap = true;
+                $scope.showDetails = false;
+                $scope.center = {
+                    lat: 1.352083,
+                    lng: 103.899836,
+                    zoom: 12
+                }
             }
 
 

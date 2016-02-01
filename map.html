@@ -32,7 +32,7 @@
             <div star-rating ng-model="rating.rating1" max="5" on-rating-select="rating.rateFunction(rating)"></div>
           </div>
           <img class="panel-img" src="images/1.jpg">
-          <button ng-click="exploreTrail(trail)" class="btn btn-info badge-panel" type="button"><span class="glyphicon glyphicon-info-sign"></span> Explore</button>
+          <button ng-click="exploreTrail(trail)" class="btn btn-info badge-panel button-right" type="button"><span class="glyphicon glyphicon-info-sign"></span> Explore</button>
 
           <p>{{trail.duration}}</p>
         </div>
@@ -53,6 +53,7 @@
 
       <button class="btn btn-sm btn-success" type="button"><span class="glyphicon glyphicon-plus"></span> Add to itinerary</button>
       <button class="btn btn-sm btn-success" type="button"><span class="glyphicon glyphicon-download-alt"></span> Download</button>
+      <button ng-click="returnMap()" class="btn btn-sm btn-success" type="button"><span class="glyphicon glyphicon-arrow-left"></span> Map</button>
       <h4>Reviews</h4>
       <b>WOW Experience!</b>
       <p><i>My friends and i decided to take some beautiful photos today for our photo album in instagram. 
