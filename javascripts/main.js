@@ -4,6 +4,8 @@ var app = angular.module('geo-ass-one', ['leaflet-directive', 'firebase', 'ngSan
 app.controller("TrailController", [ "$scope", "$http", "$firebase", "leafletData", function($scope, $http, $firebase, leafletData) {
             $scope.showMap = true;
             $scope.showDetails = false;
+            $scope.showResults = true;
+            $scope.showSurprise = false;
             angular.extend($scope, {
                 center: {
                     lat: 1.352083,
@@ -78,10 +80,11 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", "leafletData
                 }
             }
 
-            $scope.exploreTrail = function(trail){
+            $scope.exploreTrail = function(trail, index){
                 $scope.showMap = false;
                 $scope.showDetails = true;
                 $scope.exploring = trail;
+                $scope.imgNumber = index;
             }
 
             $scope.returnMap = function(){
@@ -92,6 +95,16 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", "leafletData
                     lng: 103.899836,
                     zoom: 12
                 }
+            }
+
+            $scope.surprise = function(){
+                $scope.showResults = false;
+                $scope.showSurprise = true;
+            }
+
+            $scope.surprise = function(){
+                $scope.showResults = false;
+                $scope.showSurprise = true;
             }
 
 
