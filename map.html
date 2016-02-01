@@ -15,11 +15,14 @@
         <span class="input-group-btn">
           <button class="btn btn-info" type="button">Surprise Me</button>
         </span>
-      </div><!-- /input-group -->
+      </div>
 
       <div class="result-panels">
         <div class="panel panel-success" ng-repeat="trail in trails | filter:search">
-          <div class="panel-heading"><a class="btn btn-block">{{trail.title}}</a><span class="badge badge-panel">4.5</span></div>
+          <div class="panel-heading">
+            <a class="btn btn-block">{{trail.title}}</a>
+            <span class="badge badge-panel"><span class="glyphicon glyphicon-star"></span>4.5</span>
+          </div>
           <div class="panel-body">
             <p ng-bind-html="trail.details"/>
             <p>{{trail.duration}}</p>
@@ -27,8 +30,8 @@
         </div>
       </div>
     </div>
-    
-    <leaflet class="map" lf-center="center" layers="layers"></leaflet>
+
+    <leaflet class="map" lf-center="center" geojson="geojson" layers="layers"></leaflet>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>

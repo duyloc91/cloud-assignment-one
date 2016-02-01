@@ -1,7 +1,7 @@
 
 var app = angular.module('geo-ass-one', ['leaflet-directive', 'firebase', 'ngSanitize']);
 
-app.controller("TrailController", [ "$scope", "$http", "$firebase", function($scope, $http, $firebase) {
+app.controller("TrailController", [ "$scope", "$http", "$firebase", "leafletData", function($scope, $http, $firebase, leafletData) {
             angular.extend($scope, {
                 center: {
                     lat: 1.352083,
@@ -13,21 +13,27 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", function($sc
                         xyz: {
                             name: 'OpenStreetMap (XYZ)',
                             url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                            type: 'xyz'
+                            type: 'xyz',
+                            layerOptions: {
+                                subdomains: ['a', 'b', 'c'],
+                                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                                continuousWorld: true
+                            }
+
                         }
                     },
                     overlays: {
-                        wms: {
-                            name: 'EEUU States (WMS)',
-                            type: 'wms',
-                            visible: true,
-                            url: 'http://suite.opengeo.org/geoserver/usa/wms',
-                            layerParams: {
-                                layers: 'usa:states',
-                                format: 'image/png',
-                                transparent: true
-                            }
-                        }
+                        // wms: {
+                        //     name: 'EEUU States (WMS)',
+                        //     type: 'wms',
+                        //     visible: true,
+                        //     url: 'http://suite.opengeo.org/geoserver/usa/wms',
+                        //     layerParams: {
+                        //         layers: 'usa:states',
+                        //         format: 'image/png',
+                        //         transparent: true
+                        //     }
+                        // }
                     }
                 }
             });
@@ -76,39 +82,39 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", function($sc
 
 
 
+
             // Get the countries geojson data from a JSON
-            $http.get("json/path-one.geojson").success(function(data, status) {
+            $http.get("json/cycling-paths-default-crs.geojson").success(function(data, status) {
+                console.log(data);
                 angular.extend($scope, {
                     geojson: {
                         data: data,
                         style: {
-                            fillColor: "green",
-                            weight: 2,
+                            weight: 3,
                             opacity: 1,
-                            color: 'white',
-                            dashArray: '3',
-                            fillOpacity: 0.7
+                            color: '#ff0000'
                         }
                     }
                 });
             });
 
-            // Get the countries geojson data from a JSON
-            $http.get("json/JPN.geo.json").success(function(data, status) {
-                angular.extend($scope, {
-                    geojson: {
-                        data: data,
-                        style: {
-                            fillColor: "green",
-                            weight: 2,
-                            opacity: 1,
-                            color: 'white',
-                            dashArray: '3',
-                            fillOpacity: 0.7
-                        }
-                    }
-                });
-            });
+            // // Get the countries geojson data from a JSON
+            // $http.get("json/JPN.geo.json").success(function(data, status) {
+            //     console.log(data);
+            //     angular.extend($scope, {
+            //         geojson: {
+            //             data: data,
+            //             style: {
+            //                 fillColor: "green",
+            //                 weight: 2,
+            //                 opacity: 1,
+            //                 color: 'white',
+            //                 dashArray: '3',
+            //                 fillOpacity: 0.7
+            //             }
+            //         }
+            //     });
+            // });
 
             // $http.get("json/trails.json").success(function(data, status) {
             //     $scope.trails = data.trails;
