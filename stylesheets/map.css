@@ -20,6 +20,10 @@
 	width: 20% !important;
 }
 
+.surprise{
+	margin-left : 35%;
+}
+
 
 .search-area{
 	right: 1.5%;
@@ -29,7 +33,7 @@
 .result-panels{
 	right: 1%;
 	left: 1%;
-	margin-top:50px;
+	margin-top:30px;
 	float: right !important;
 	width: 25% !important;
 }
