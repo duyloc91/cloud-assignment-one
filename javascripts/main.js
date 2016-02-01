@@ -70,6 +70,7 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", "leafletData
 
             $scope.zoominTrail = function(){
                 $scope.showMap = true;
+                $scope.showDetails = false;
                 $scope.center = {
                     lat: 1.348737,
                     lng: 103.95607,
