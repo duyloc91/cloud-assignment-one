@@ -1,5 +1,5 @@
 
-var app = angular.module('geo-ass-one', ['leaflet-directive', 'firebase']);
+var app = angular.module('geo-ass-one', ['leaflet-directive', 'firebase', 'ngSanitize']);
 
 app.controller("TrailController", [ "$scope", "$http", "$firebase", function($scope, $http, $firebase) {
             angular.extend($scope, {
@@ -48,6 +48,7 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", function($sc
             var authData = ref.getAuth();
               if (authData && authData!={}) {
                   $scope.currentUser = $firebase(ref.child("user").child(authData.uid)).$asObject();
+                    console.log($scope.currentUser);
               } else {
                   console.log("User is logged out");
               }
@@ -110,8 +111,7 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", function($sc
                 });
             });
 
-            $http.get("json/trails.json").success(function(data, status) {
-                $scope.trails = data.trails;
-                console.log(data)
-            });
+            // $http.get("json/trails.json").success(function(data, status) {
+            //     $scope.trails = data.trails;
+            // });
         }]);

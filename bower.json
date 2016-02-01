@@ -16,7 +16,8 @@
   "dependencies": {
     "angular": "1.x",
     "leaflet": "0.7.x",
-    "angular-loading": "~0.1.4"
+    "angular-loading": "~0.1.4",
+    "angular-sanitize": "~1.4.9"
   },
   "devDependencies": {
     "jquery": "*",

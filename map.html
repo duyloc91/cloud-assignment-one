@@ -19,10 +19,26 @@
 
       <div class="result-panels" >
         <button class="btn btn-info surprise" type="button">Surprise Me</button></br>
+        
+        <!-- Show this div when the users is logged in -->
+        <!-- <div ng-show="currentUser">
+          You are logged in as: {{currentUser.github.displayName}} <br><br>
+            <button class="btn btn-danger" ng-click="logout()">
+            <span class="glyphicon"></span>Logout </button>
+        </div>
+ -->
+
+        <!-- Show this div when the user is not logged in -->
+<!--         <div ng-hide="currentUser">
+          <button class="btn btn-success" ng-click="login('github')">
+            <span class="glyphicon glyphicon-user"></span>Login with Github
+          </button>
+        </div>
+ -->
         <div class="panel panel-success" ng-repeat="trail in trails | filter:search">
           <div class="panel-heading">{{trail.title}}</div>
           <div class="panel-body">
-            <p>{{trail.details}}</p>
+            <p ng-bind-html="trail.details"/>
             <p>{{trail.duration}}</p>
           </div>
         </div>
@@ -31,6 +47,7 @@
     
     <leaflet class="map" lf-center="center" layers="layers"></leaflet>
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/leaflet/dist/leaflet.js"></script>
