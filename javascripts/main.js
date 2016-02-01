@@ -48,7 +48,6 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", function($sc
             var authData = ref.getAuth();
               if (authData && authData!={}) {
                   $scope.currentUser = $firebase(ref.child("user").child(authData.uid)).$asObject();
-                    console.log($scope.currentUser);
               } else {
                   console.log("User is logged out");
               }

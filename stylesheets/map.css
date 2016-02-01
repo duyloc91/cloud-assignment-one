@@ -17,11 +17,7 @@
 
 .search-bar{
 	float: right !important;
-	width: 20% !important;
-}
-
-.surprise{
-	margin-left : 35%;
+	width: 15% !important;
 }
 
 
@@ -36,4 +32,8 @@
 	margin-top:30px;
 	float: right !important;
 	width: 25% !important;
+}
+
+.badge-panel{
+	float:right;
 }
