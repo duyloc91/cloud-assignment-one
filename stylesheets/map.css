@@ -1,7 +1,34 @@
 .map {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 25%;
+	height: 100%;
+	width: 100%;
+}
+
+.left-column{
+	position: absolute;
+	top: 0px;
+	right: 75%;
+	height: 100%;
+	width: 100%;
+}
+
+.search-bar{
+	float: right !important;
+	width: 20% !important;
+}
+
+
+.search-area{
+	right: 1.5%;
+	top:10px;
+}
+
+.result-panels{
+	right: 1%;
+	left: 1%;
+	margin-top:50px;
+	float: right !important;
+	width: 25% !important;
 }

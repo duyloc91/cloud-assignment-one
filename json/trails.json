@@ -1,0 +1,219 @@
+{
+	"trails" : [
+		{
+			"title": "Pond Gardens at Bishan-Ang Mo Kio Park",
+			"details" : "Highlights:<br>A variety of habitats offering different degrees of tranquillity and serenity<br>Unique riparian (river bank) habitat rich in flora and fauna <br>Lotus pond in full bloom<br>Two themed playgrounds for the young and the young at heart<br>Rare fauna and fauna from the nearby Central Nature Reserve",
+			"duration" : "Walking Time: 1 hour"
+		},
+		{
+			"title": "Sungei Buloh Wetland Reserve – A Walking Trail",
+			"details" : "Highlights:<br>Two easy routes that bring you close to nature and wildlife<br>Close look at mangroves, including some rare species<br>Easy spotting of the abundant and thriving wetland wildlife<br>Bird-watching amid the verdant, tranquil setting of Sungei Buloh Besar",
+			"duration" : "Walking Time: 45 minutes for Mangrove Boardwalk and 1 – 2 hours for Route 1"
+		},
+		{
+			"title": "Heritage Roads",
+			"details" : "Highlights:<br>Opportunities to walk along lesser-known Heritage Roads, rather than just driving past them quickly<br>Enriching lessons on the history of Singapore along the Heritage Roads<br>A close look at majestic trees, which include two Heritage Trees",
+			"duration" : "Walking Time: 3 - 4 hours inclusive of travelling time"
+		},
+		{
+			"title": "Wallace Trail at Dairy Farm Nature Park",
+			"details" : "Highlights:<br>A beautiful walk in a serene setting<br>A rustic ramble through an old kampong<br>Close look at fruit trees, butterflies, birds, and meandering streams",
+			"duration" : "Walking Time: 30 – 45 minutes"
+		},
+		{
+			"title": "Admiralty Park - Walking Trail",
+			"details" : "Highlights:<br>A walk in a variety of habitats offering a wide choice of nature activities within a compact area<br>A close look at rare flora and fauna not found anywhere else",
+			"duration" : "Walking Time: 1 - 2 hours"
+		},
+		{
+			"title": "Bukit Timah Nature Reserve - Walking Trail",
+			"details" : "Highlights:<br>A tropical forest walk just minutes away from the city<br>Nature in its pristine form<br>An amazing variety of native plants and animals",
+			"duration" : "Walking Time: 45 minutes - 1 hour"
+		},
+		{
+			"title": "North Eastern Riverine Loop",
+			"details" : "Highlights:<br>Access to a biodiversity haven for bird-watchers and nature enthusiasts<br>A trip around a scenic loop with 80% of the route along reservoirs and waterways<br>A first-hand experience of a lesser-known, rustic side of Singapore<br>A seamless route that is easily accessible via public transport",
+			"duration" : "Walking Time: 3-4 hours, Cycling time: 2 hours"
+		},
+		{
+			"title": "Labrador Nature & Coastal Walk",
+			"details" : "Highlights:<br>An up-close and personal experience with rich mangrove flora and fauna<br>Exposure to a wide variety of habitats around the seamless loop – mudflat, mangrove, coastal cliff, rocky shore, parkland and Adinandra belukar<br>Mesmerising views of Keppel Harbour, Sentosa island and Labrador Nature Reserve<br>Easy access by foot from Labrador Nature & Coastal Walk to Labrador Nature Reserve and the Southern Ridges  ",
+			"duration" : "Walking Time: 45 minutes (for Labrador Nature & Coastal Walk only)"
+		},
+		{
+			"title": "Singapore Botanic Gardens - Rain Forest Trail",
+			"details" : "Highlights:<br>A stroll through an ancient rainforest in the heart of the city<br>Well-marked trails and shady trees<br>An accessible living laboratory and museum of natural history",
+			"duration" : "Walking Time: 30 - 40 minutes"
+		},
+		{
+			"title": "Lower Peirce Trail",
+			"details" : "Highlights:<br>An easy 900m wooden boardwalk through a mature secondary forest<br>Peaceful walk by the water's edge<br>Symphony of nature's music in the background<br>Sightings of native animals like the Clouded Monitor Lizard, Common Sun Skink, Plantain Squirrel and Long-tailed Macaque<br>Occasional glimpses of native birds like the Greater Racket-tailed Drongo, Striped Tit-babbler and Olive-winged Bulbul",
+			"duration" : "Walking Time: 45 minutes - 1 hour"
+		},
+		{
+			"title": "Singapore Botanic Gardens - Ginger Garden",
+			"details" : "Highlights:<br>Diverse collection of gingers, organised according to geographical origin or plant uses<br>Pleasant walk on the lush, verdant grounds of the Singapore Botanic Gardens<br>Popular photograph spots at the scenic waterfall",
+			"duration" : "Walking Time: 30 - 45 minutes"
+		},
+		{
+			"title": "Changi Point Coastal Walk",
+			"details" : "Highlights:<br>A scenic walk by the sea<br>Lush greenery and coastal-loving plants<br>Breathtaking views of the coast",
+			"duration" : "Walking Time: 45 minutes"
+		},
+		{
+			"title": "Ann Siang Hill Park - Telok Ayer Green Walking Trail",
+			"details" : "Highlights:<br>Places of worship built in the 1800s<br>Old shophouses and traces of the lives of Singapore's early immigrants<br>Close look at interesting fruit and spice trees",
+			"duration" : "Walking Time: 30 - 45 minutes"
+		},
+		{
+			"title": "Empress Place, Esplanade Park & War Memorial Park - Walking Trail",
+			"details" : "Highlights:<br>Historical landmarks telling the story of Singapore's history, growth and development<br>Introduction to prominent features of the Civic District",
+			"duration" : "Walking Time: 1 hour"
+		},
+		{
+			"title": "Singapore Botanic Gardens - National Orchid Garden Trail",
+			"details" : "Highlights:<br>Spectacular display of more than 600 species and hybrid orchids<br>Prized collection of VIP orchids named after celebrities and foreign dignitaries<br>Simulated tropical highland forest featuring orchids normally only found in the tropical highland areas, carnivorous plants and cool-growing plant species",
+			"duration" : "--"
+		},
+		{
+			"title": "Central Catchment Nature Reserve (MacRitchie) - TreeTop Walk Walking Trail",
+			"details" : "Highlights:<br>Bird's eye view of the forest with its large and tall forest trees that rise above the canopy<br>A close encounter with interesting trees and plants along the trail<br>Sights of native creatures of the forest like the Clouded Monitor Lizard, Common Sun Skink, Plantain Squirrel and Long-tailed Macaque<br>Occasional glimpses of native birds like the Greater Racket-tailed Drongo, Striped Tit-Babbler and Olivewinged Bulbul.",
+			"duration" : "--"
+		},
+		{
+			"title": "Singapore Botanic Gardens - Evolution Garden Trail",
+			"details" : "Highlights:<br>A journey through time depicting the story of plant life on Earth throughout the ages<br>A peek at the early plants like mosses, liverworts and ferns<br>Vast collection of cycads, the oldest and most primitive of the living seed plants ",
+			"duration" : "--"
+		},
+		{
+			"title": "Northern Explorer PCN - Cycling Trail",
+			"details" : "Highlights:<br>Sweeping views of Straits of Johor from jetty at Woodlands Waterfront<br>Nature trail at Admiralty Park<br>Rich biodiversity along park connectors<br>Scenic view of Lower Seletar Reservoir",
+			"duration" : "--"
+		},
+		{
+			"title": "Northern Explorer PCN - Walking Trail",
+			"details" : "Highlights:<br>Pleasant walk along green belts on NEPCN<br>Close encounter with diverse spread of flora and fauna at Admiralty Park<br>Scenic spots offering nice views of Lower Seletar Reservoir<br>Sweeping views of Straits of Johor from jetty at Woodlands Waterfront",
+			"duration" : "--"
+		},
+		{
+			"title": "Heritage Trees at Changi Walking Trail",
+			"details" : "Highlights:<br>Close look at nine magnificent Heritage Trees in the Changi Tree Conservation Area<br>Quiet resting point at Turnhouse Park, against the backdrop of lush greenery",
+			"duration" : "Walking Time: 30 minutes"
+		},
+		{
+			"title": "Fort Canning  Park - Trees of the Fort Walking Trail ",
+			"details" : "Highlights:<br>Nice walk in Fort Canning Park against the backdrop of lush greenery and rich history<br>Close look at 25 beautiful trees in the park",
+			"duration" : "Walking Time: 1 hour"
+		},
+		{
+			"title": "Pulau Ubin - Tree Trail",
+			"details" : "Highlights:<br>Off the beaten track experience across Pulau Ubin<br>Close look at interesting flora on Pulau Ubin<br>House of the late Village Head<br>House No. 1 (Tudor-style cottage with fireplace)<br>Glimpse of Pulau Sekudu (Frog Island) and views of the sea from the jetty",
+			"duration" : "Walking Time: 2 hours"
+		},
+		{
+			"title": "Singapore Botanic Gardens - Heritage Trees of Singapore Botanic Gardens Walking Trail",
+			"details" : "Highlights:<br>Nice walk on the lush verdant grounds of the Singapore Botanic Gardens<br>Close look at seven magnificent Heritage Trees.",
+			"duration" : "Walking Time: 30 minutes"
+		},
+		{
+			"title": "Eastern Coastal PCN - Cycling Trail",
+			"details" : "Highlights:<br>Mangrove Boardwalk and bird-watching tower at Pasir Ris Park<br>Heritage Trees in Changi<br>Ketam Mountain Bike at Pulau Ubin<br>Scenic views along Coastal Park Connector<br>Cable ski and other water sports at East Coast Park<br>Forest Adventure at Bedok Reservoir Park",
+			"duration" : "--"
+		},
+		{
+			"title": "Sengkang Riverside Park - Fruit Tree Trail",
+			"details" : "Highlights:<br>Close look at 16 interesting fruit trees<br>Pleasant walk around the parameters of a constructed wetland<br>Easy spotting of birds, dragonflies and damselflies",
+			"duration" : "Walking Time: 30 minutes"
+		},
+		{
+			"title": "Southern Ridges - From Marang Trail to Canopy Walk",
+			"details" : "Highlights:<br>Mount Faber (spectacular view)<br>Forest Walk (elevated walkway)<br.Henderson Waves (viewing migratory birds-of-prey)<br>Alexandra Arch (unique architecture)<br>Canopy Walk (boards depicting WWII-related events)",
+			"duration" : "Walking Time: 2 - 3 hours"
+		},
+		{
+			"title": "Southern Ridges - Marang Trail",
+			"details" : "Highlights:<br>Flora and fauna of secondary forest",
+			"duration" : "Walking Time: 15 minutes"
+		},
+		{
+			"title": "Southern Ridges - Forest Walk ",
+			"details" : "Highlights:<br>Elevated walkway<br>High biodiversity of flora and fauna",
+			"duration" : "Walking Time: 20 minutes"
+		},
+		{
+			"title": "Southern Ridges - Faber Walk",
+			"details" : "Highlights:<br>Bird's eye view from Mount Faber<br>Merlion sculpture<br>Jewel Box",
+			"duration" : "Walking Time: 15 minutes"
+		},
+		{
+			"title": "Southern Ridges - Henderson Waves",
+			"details" : "Highlights:<br>Highest pedestrian bridge in Singapore<br>Distinctive architecture of bridge<br>Good point for viewing migratory birds-of-prey",
+			"duration" : "Walking Time: 5 minutes"
+		},
+		{
+			"title": "Southern Ridges - Floral Walk",
+			"details" : "Highlights:<br>More than 100 species of flowering shrubs and trees",
+			"duration" : "Walking Time: 5 minutes"
+		},
+		{
+			"title": "Southern Ridges - Hilltop Walk",
+			"details" : "Highlights:<br>Terraced garden - highest point in Telok Blangah Hilltop Park",
+			"duration" : "Walking Time: 15 minutes"
+		},
+		{
+			"title": "Southern Ridges - Canopy Walk",
+			"details" : "Highlights:<br>Adinandra belukar (secondary forest)<br>Boards depicting important WWII-related events<br>High biodiversity of birds",
+			"duration" : "Walking Time: 5 minutes"
+		},
+		{
+			"title": "Southern Ridges - Alexandra Arch",
+			"details" : "Highlights:<br>Open leaf structure of bridge<br>Changing LED lights at night",
+			"duration" : "Walking Time: 15 minutes"
+		},
+		{
+			"title": "Pasir Ris Park",
+			"details" : "Highlights:<br>Mangrove Boardwalk<br>Jetty and Bird Tower (bird-watching opportunities)<br>Kitchen Garden (Sensory Experience)<br>Maze Garden (Mini adventure)",
+			"duration" : "Walking Time: 1 - 2 hours"
+		},
+		{
+			"title": "Labrador Nature Reserve",
+			"details" : "Highlights:<br>Sites indicating Singapore's historical maritime and war past<br>Paranomic view of Singapore's offshore islands<br>Diverse flora and fauna",
+			"duration" : "Walking Time: 1 - 2 hours"
+		},
+		{
+			"title": "Bukit Batok Nature Park",
+			"details" : "Highlights:<br>Interesting species of trees and shrubs<br>Vantage views of quarry pool from lookout points<br>Bird-watching opportunities<br>World War II Memorial Site",
+			"duration" : "Walking Time: 1 - 2 hours"
+		},
+		{
+			"title": "Fort Canning Park - Singapore's Ancient History Walking Trail",
+			"details" : "Highlights:<br>Spice Garden (site of Singapore's first experimental and botanical garden)<br>Heritage Trees<br>Keramat (shrine) housing tomb of the last ruler of pre-colonial Singapore<br>Archaeological dig and exhibition area",
+			"duration" : "Walking Time: 1 - 2 hours"
+		},
+		{
+			"title": "Fort Canning Park - Singapore's Colonial History Walking Trail",
+			"details" : "Highlights:<br>Remnants and relics depicting Fort Canning's military history<br>Site of Sir Stamford Raffles' first bungalow<br>Spice garden (site of Singapore's first experimental and botanical garden)<br>Singapore's heritage and native trees",
+			"duration" : "Walking Time: 1 - 2 hours"
+		},
+		{
+			"title": "MacRitchie Boardwalk -  Prunus Trail",
+			"details" : "Highlights:<br>Close encounter with interesting trees and plants<br>Possible sights of native creatures of the forest<br>Beautiful views of the reservoir against the backdrop of dense rainforest",
+			"duration" : "Walking Time: 1 hour"
+		},
+		{
+			"title": "MacRitchie Boardwalk - Chemperai Trail",
+			"details" : "Highlights:<br>Panoramic views of the reservoir against the backdrop of dense rainforest<br>Thriving dragonfly and damselfly communities<br>An easy trail that skirts the edge of the reservoir",
+			"duration" : "Walking Time: 1 hour"
+		},
+		{
+			"title": "Western Adventure PCN - Cycling Trail",
+			"details" : "Highlights:<br>Butterfly Garden at Pangsua PC<br>Mountain tracks at Dairy Farm Nature Park<br>Rock climbing facilities at Dairy Farm Quarry<br>Wallace Education Centre (learning journey)",
+			"duration" : "Cycling Time: 2 - 4 hours"
+		},
+		{
+			"title": "Western Adventure PCN - Walking Trail",
+			"details" : "Highlights:<br>Wallace Education Centre (learning journey)<br>Close views of wildlife at the Singapore quarry<br>Nature trail at Bukit Batok Nature Park<br>Scenic views of quarry lake",
+			"duration" : "Walking Time: 4 - 6 hours"
+		}
+	]
+}
