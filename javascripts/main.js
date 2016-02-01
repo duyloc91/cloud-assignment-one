@@ -38,7 +38,7 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", function($sc
             var theFirebaseURL = "https://cloud-assignment-one.firebaseio.com/";
             
             var ref = new Firebase(theFirebaseURL);
-            $scope.trails = $firebase(ref.child("trail")).$asArray(); 
+            $scope.trails = $firebase(ref.child("trails")).$asArray(); 
             $scope.edit = false;
             $scope.error = false;
             $scope.incomplete = false;  
@@ -108,5 +108,10 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", function($sc
                         }
                     }
                 });
+            });
+
+            $http.get("json/trails.json").success(function(data, status) {
+                $scope.trails = data.trails;
+                console.log(data)
             });
         }]);

@@ -11,23 +11,18 @@
   <body ng-controller="TrailController">
     <div class="left-column">
       <div class="input-group search-area">
-        <input type="text" class="form-control search-bar">
+        <input type="text" class="form-control search-bar" ng-model="search"> 
         <span class="input-group-btn">
           <button class="btn btn-info" type="button">Go</button>
         </span>
       </div><!-- /input-group -->
 
-      <div class="result-panels">
-        <div class="panel panel-success">
-          <div class="panel-heading">Trail 1</div>
+      <div class="result-panels" >
+        <div class="panel panel-success" ng-repeat="trail in trails | filter:search">
+          <div class="panel-heading">{{trail.title}}</div>
           <div class="panel-body">
-            <p>Panel with heading</p>
-          </div>
-        </div>
-        <div class="panel panel-success">
-          <div class="panel-heading">Trail 2</div>
-          <div class="panel-body">
-            <p>...</p>
+            <p>{{trail.details}}</p>
+            <p>{{trail.duration}}</p>
           </div>
         </div>
       </div>
