@@ -21,7 +21,26 @@
       </span>
     </div>
 
-    <div ng-show="showSurprise"></div>
+    <div class="result-panels" ng-show="showSurprise">
+      The best trails in town for you:
+      <button ng-click="refresh()" class="btn btn-info button-right" type="button"><span class="glyphicon glyphicon-refresh"></span></button>
+      <div class="panel panel-success" ng-repeat="trail in trails | filter:'changi'">
+        <div class="panel-heading">
+          <a class="btn btn-block" ng-click="zoominTrail()">{{trail.title}}</a>
+          <span class="badge badge-panel"><span class="glyphicon glyphicon-star"></span>4.5</span>
+        </div>
+        <div class="panel-body">
+          <div ng-controller="RatingController as rating">
+            <div star-rating ng-model="rating.rating1" max="5" on-rating-select="rating.rateFunction(rating)"></div>
+          </div>
+          <img class="panel-img" ng-src="images/{{$index%4+11}}.jpg">
+          <button ng-click="exploreTrail(trail, $index+11)" class="btn btn-info badge-panel button-right" type="button"><span class="glyphicon glyphicon-info-sign"></span> Explore</button>
+
+          <p>{{trail.duration}}</p>
+        </div>
+      </div>
+    </div>
+
 
     <div class="result-panels" ng-show="showResults">
       <div class="panel panel-success" ng-repeat="trail in trails | filter:search">

@@ -102,9 +102,9 @@ app.controller("TrailController", [ "$scope", "$http", "$firebase", "leafletData
                 $scope.showSurprise = true;
             }
 
-            $scope.surprise = function(){
-                $scope.showResults = false;
-                $scope.showSurprise = true;
+            $scope.refresh = function(){
+                $scope.showResults = true;
+                $scope.showSurprise = false;
             }
 
 
